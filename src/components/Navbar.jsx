@@ -60,19 +60,19 @@ export default function Navbar({ onOpenResume }) {
       {/* Logo mark */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="font-outfit font-bold text-white text-sm tracking-wider mr-2 hover:text-dsuGold transition-colors"
+        className="font-outfit font-bold text-white text-sm tracking-wider mr-2 hover:text-dsuGold transition-colors shrink-0"
         aria-label="Scroll to top"
       >
         SP<span className="text-dsuGold">.</span>
       </button>
 
-      <div className="w-px h-4 bg-white/10" />
+      <div className="w-px h-4 bg-white/10 shrink-0" />
 
       {NAV_LINKS.map(({ label, id }) => (
         <button
           key={id}
           onClick={() => scrollTo(id)}
-          className={`font-outfit text-sm font-medium transition-colors relative group ${
+          className={`font-outfit text-sm font-medium transition-colors relative group shrink-0 ${
             activeSection === id ? 'text-dsuGold' : 'text-white/70 hover:text-white'
           }`}
         >
@@ -92,7 +92,7 @@ export default function Navbar({ onOpenResume }) {
       <button
         onClick={onOpenResume}
         id="nav-resume-link"
-        className="flex items-center gap-1.5 text-xs font-outfit font-medium text-white/60 hover:text-dsuGold transition-colors"
+        className="flex items-center gap-1.5 text-xs font-outfit font-medium text-white/60 hover:text-dsuGold transition-colors shrink-0"
         aria-label="View resume"
       >
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -106,7 +106,7 @@ export default function Navbar({ onOpenResume }) {
       <a
         href="#contact"
         onClick={(e) => { e.preventDefault(); scrollTo('contact') }}
-        className="text-xs font-outfit font-bold text-dsuBlue bg-dsuGold px-4 py-1.5 rounded-full hover:bg-yellow-300 transition-colors"
+        className="text-xs font-outfit font-bold text-dsuBlue bg-dsuGold px-4 py-1.5 rounded-full hover:bg-yellow-300 transition-colors shrink-0"
       >
         Hire Me
       </a>

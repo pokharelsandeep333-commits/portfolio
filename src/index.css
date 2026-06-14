@@ -429,6 +429,14 @@ body {
   pointer-events: none;
   transition: opacity 0.4s ease;
   white-space: nowrap;
+  max-width: 92vw;
+  overflow-x: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.navbar-pill::-webkit-scrollbar {
+  display: none;
 }
 
 .navbar-pill.visible {
